@@ -3,69 +3,300 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Geometrik</title>
+<title>Geometrik Studio — Presentation Design & Strategic Storytelling</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="London-based presentation design studio specialising in executive presentations, strategic storytelling and visual communication systems.">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
-  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+  background: #f7f5f0;
   color: #111;
 }
 
 .container {
-  max-width: 1100px;
+  width: min(1120px, 92%);
   margin: auto;
-  padding: 80px 20px;
+}
+
+nav {
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.nav-links a {
+  margin-left: 28px;
+  color: #111;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 120px 0 90px;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 28px;
 }
 
 h1 {
-  font-size: 56px;
-  line-height: 1.1;
-  margin-bottom: 20px;
+  max-width: 900px;
+  font-size: clamp(54px, 8vw, 104px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin: 0 0 36px;
 }
 
-h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+.hero-text {
+  max-width: 760px;
+  font-size: 24px;
+  line-height: 1.35;
+  color: #333;
 }
 
-p {
-  font-size: 18px;
+.studio-line {
+  max-width: 760px;
+  margin-top: 28px;
+  font-size: 17px;
+  line-height: 1.65;
   color: #555;
-  line-height: 1.6;
+}
+
+.buttons {
+  margin-top: 42px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 30px;
-  padding: 14px 28px;
+  padding: 15px 24px;
   border: 1px solid #111;
   text-decoration: none;
   color: #111;
+  font-size: 14px;
   font-weight: 500;
 }
 
+.btn.dark {
+  background: #111;
+  color: #fff;
+}
+
 section {
-  margin-top: 140px;
+  padding: 100px 0;
+  border-top: 1px solid #ddd8cf;
 }
 
-.grid {
+.intro {
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  max-width: 980px;
+}
+
+.section-label {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 80px;
 }
 
-.case {
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
+h2 {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin: 0;
 }
 
-.footer {
-  margin-top: 160px;
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin-top: 0;
+}
+
+.large-copy {
+  font-size: 22px;
+  line-height: 1.55;
+  color: #222;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
+
+.service {
+  border-top: 1px solid #111;
+  padding-top: 22px;
+}
+
+.service span {
+  display: block;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+.service h3 {
+  font-size: 28px;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px;
+}
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.step {
+  background: #fff;
+  padding: 28px;
+  min-height: 230px;
+}
+
+.step span {
+  color: #999;
+  font-size: 13px;
+}
+
+.step h3 {
+  font-size: 24px;
+  margin: 24px 0 12px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.benefit {
+  background: #111;
+  color: #fff;
+  padding: 32px;
+}
+
+.benefit p {
+  color: #cfcfcf;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.work-card {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #ffffff, #dfdbd2);
+  border: 1px solid #ddd8cf;
+  padding: 28px;
+  display: flex;
+  align-items: flex-end;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+}
+
+.split-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.panel {
+  background: #fff;
+  padding: 34px;
+}
+
+.panel h3 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.panel ul {
+  padding-left: 20px;
+  line-height: 1.9;
+  color: #444;
+  font-size: 17px;
+}
+
+.quote {
+  font-size: clamp(34px, 5vw, 66px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  max-width: 980px;
+}
+
+.contact {
+  text-align: center;
+  padding: 130px 0;
+}
+
+.contact h2 {
+  max-width: 760px;
+  margin: auto;
+}
+
+.contact p {
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+footer {
+  padding: 34px 0;
+  border-top: 1px solid #ddd8cf;
+  color: #777;
   font-size: 14px;
-  color: #888;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .two-col,
+  .services,
+  .process,
+  .benefits,
+  .work-grid,
+  .split-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 80px;
+  }
 }
 </style>
 
@@ -75,96 +306,253 @@ section {
 
 <div class="container">
 
-  <!-- HERO -->
+<nav>
+  <div class="logo">Geometrik Studio</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#approach">Approach</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-  <h1>
-    We design presentations<br>
-    that actually win.
-  </h1>
+<header class="hero">
+  <div class="kicker">Presentation Design · Storytelling · Visual Systems</div>
 
-  <p>
-    High-impact PowerPoint design and storytelling for startups, SaaS and global teams.
+  <h1>Ideas are easy to say. Harder to understand. Even harder to remember.</h1>
+
+  <p class="hero-text">
+    We design presentations and visual stories that make complex ideas clear,
+    compelling, and impossible to ignore.
   </p>
 
-<a href="#contact" class="btn">Start a project</a>
+  <p class="studio-line">
+    Geometrik Studio is a London-based design studio specialising in executive
+    presentations, strategic storytelling and visual communication systems for global teams.
+  </p>
 
-  <!-- ABOUT -->
-
-  <section>
-    <h2>About</h2>
-    <p>
-      I help companies turn complex ideas into clear, persuasive presentations.
-      From investor decks to enterprise storytelling — everything is built to drive results.
-    </p>
-  </section>
-
-  <!-- SERVICES -->
-
-  <section>
-    <h2>Services</h2>
-    <div class="grid">
-      <div>
-        <h3>Presentation Design</h3>
-        <p>PowerPoint, Google Slides, pitch decks, sales decks.</p>
-      </div>
-      <div>
-        <h3>Storytelling</h3>
-        <p>Message structure, narrative, simplifying complexity.</p>
-      </div>
-      <div>
-        <h3>Consulting</h3>
-        <p>Deck audits, strategy sessions, content clarity.</p>
-      </div>
-      <div>
-        <h3>Corporate</h3>
-        <p>Enterprise presentations for global teams.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-
-  <section>
-    <h2>Selected Work</h2>
-
-```
-<div class="case">
-  <strong>SaaS Pitch Deck</strong>
-  <p>Helped a startup simplify product story and secure funding.</p>
-</div>
-
-<div class="case">
-  <strong>Corporate Presentation</strong>
-  <p>Redesigned internal deck for clarity and executive communication.</p>
-</div>
-
-<div class="case">
-  <strong>Investor Deck</strong>
-  <p>Structured narrative and visuals for high-stakes presentations.</p>
-</div>
-```
-
-  </section>
-
-  <!-- PROCESS -->
-
-  <section>
-    <h2>Process</h2>
-    <p>
-      Understand → Structure → Design → Refine → Deliver
-    </p>
-  </section>
-
-  <!-- CONTACT -->
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-  </section>
-
-  <div class="footer">
-    © Geometrik
+  <div class="buttons">
+    <a href="#contact" class="btn dark">Start a Project</a>
+    <a href="#approach" class="btn">View Approach</a>
   </div>
+</header>
+
+<section>
+  <p class="intro">
+    Most presentations fail—not because the ideas are weak,
+    but because the message gets lost.
+  </p>
+  <p class="large-copy">
+    We bring structure to complexity, clarity to content,
+    and design that actually helps people understand.
+  </p>
+</section>
+
+<section id="about">
+  <div class="two-col">
+    <div>
+      <div class="section-label">About</div>
+      <h2>Studio thinking, senior-level craft.</h2>
+    </div>
+
+```
+<div>
+  <p class="large-copy">
+    Geometrik Studio is led by Joanna Cimer — a presentation designer and visual storyteller
+    with over a decade of experience working at the intersection of design, strategy and communication.
+  </p>
+
+  <p>
+    What started as freelance work evolved into a boutique studio trusted by global brands,
+    consultancies and agencies to deliver high-stakes presentations and communication assets.
+  </p>
+
+  <p>
+    We work across technology, healthcare, finance and consulting — helping teams turn dense,
+    complex material into clear narratives that support decisions, influence stakeholders
+    and move projects forward.
+  </p>
+
+  <p>
+    Story first. Structure second. Design last.
+    Not decoration. Not templates. Communication that works.
+  </p>
+</div>
+```
+
+  </div>
+</section>
+
+<section>
+  <div class="section-label">What we do</div>
+  <div class="services">
+    <div class="service">
+      <span>01</span>
+      <h3>Executive Presentations</h3>
+      <p>Board-level, leadership and stakeholder presentations designed for clarity, confidence and impact.</p>
+    </div>
+
+```
+<div class="service">
+  <span>02</span>
+  <h3>Pitch & Investor Decks</h3>
+  <p>Narratives that persuade, simplify complexity and support high-stakes conversations.</p>
+</div>
+
+<div class="service">
+  <span>03</span>
+  <h3>Presentation Systems & Templates</h3>
+  <p>Scalable slide systems that help teams create consistent, high-quality content internally.</p>
+</div>
+
+<div class="service">
+  <span>04</span>
+  <h3>Data Visualisation & Infographics</h3>
+  <p>Turning numbers, research and frameworks into visuals people actually understand.</p>
+</div>
+
+<div class="service">
+  <span>05</span>
+  <h3>Reports & Strategic Documents</h3>
+  <p>Thought leadership, research and internal communication designed to be read — not ignored.</p>
+</div>
+```
+
+  </div>
+</section>
+
+<section id="work">
+  <div class="two-col">
+    <div>
+      <div class="section-label">Selected Work</div>
+      <h2>Recent work preview.</h2>
+    </div>
+    <div>
+      <p>
+        Full case studies are coming soon. In the meantime, here is a preview of the type of work
+        we create for leadership teams, consultancies, agencies and global organisations.
+      </p>
+    </div>
+  </div>
+
+  <div class="work-grid">
+    <div class="work-card">Executive Presentation</div>
+    <div class="work-card">Thought Leadership Report</div>
+    <div class="work-card">Pitch Deck</div>
+    <div class="work-card">Data Visualisation System</div>
+  </div>
+</section>
+
+<section>
+  <div class="split-list">
+    <div class="panel">
+      <h3>What clients come to us with</h3>
+      <ul>
+        <li>80-slide decks with no structure</li>
+        <li>Research reports nobody wants to read</li>
+        <li>Last-minute leadership presentations</li>
+        <li>Complex data that does not make sense</li>
+      </ul>
+    </div>
+
+```
+<div class="panel">
+  <h3>What they leave with</h3>
+  <ul>
+    <li>A clear story</li>
+    <li>Strong narrative flow</li>
+    <li>Visual consistency</li>
+    <li>Confidence in presenting</li>
+  </ul>
+</div>
+```
+
+  </div>
+</section>
+
+<section id="approach">
+  <div class="section-label">Approach</div>
+  <h2>A clear process, built for complex work.</h2>
+
+  <div class="process">
+    <div class="step">
+      <span>01</span>
+      <h3>Understand</h3>
+      <p>We dive into your content, goals and audience.</p>
+    </div>
+
+```
+<div class="step">
+  <span>02</span>
+  <h3>Structure</h3>
+  <p>We shape the narrative into a logical, compelling flow.</p>
+</div>
+
+<div class="step">
+  <span>03</span>
+  <h3>Design</h3>
+  <p>We create visuals that support — not distract from — the message.</p>
+</div>
+
+<div class="step">
+  <span>04</span>
+  <h3>Refine</h3>
+  <p>We iterate quickly to get it exactly right.</p>
+</div>
+```
+
+  </div>
+</section>
+
+<section>
+  <div class="two-col">
+    <div>
+      <div class="section-label">Why work with us</div>
+      <h2>Not just design. Clarity.</h2>
+    </div>
+
+```
+<div class="benefits">
+  <div class="benefit">
+    <h3>We understand information.</h3>
+    <p>You are not hiring a production designer. You are working with someone who understands how information works.</p>
+  </div>
+
+  <div class="benefit">
+    <h3>We are used to complexity.</h3>
+    <p>Technical, strategic and research-heavy content is where we do our best work.</p>
+  </div>
+
+  <div class="benefit">
+    <h3>Senior-level, hands-on.</h3>
+    <p>No layers. No handovers. No dilution.</p>
+  </div>
+
+  <div class="benefit">
+    <h3>Built for real business use.</h3>
+    <p>Presentations that are actually used — in meetings, pitches and decisions.</p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<section>
+  <p class="quote">
+    “We design presentations that don’t just look good — they help people think, understand and decide.”
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>If your presentation matters, the way it’s communicated matters too.</h2>
+  <p>Let’s make it work harder.</p>
+  <a href="mailto:your@email.com" class="btn dark">Start a project →</a>
+</section>
+
+<footer>
+  © Geometrik Studio · London · Presentation Design & Strategic Storytelling
+</footer>
 
 </div>
 
