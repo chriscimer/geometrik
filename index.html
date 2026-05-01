@@ -2,84 +2,169 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Geometrik</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: #fff;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 18px;
-      color: #aaa;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 24px;
-      border: 1px solid #fff;
-      color: #fff;
-      text-decoration: none;
-    }
-    section {
-      margin-top: 120px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Geometrik</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  background: #ffffff;
+  color: #111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  border: 1px solid #111;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+section {
+  margin-top: 140px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.case {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer {
+  margin-top: 160px;
+  font-size: 14px;
+  color: #888;
+}
+</style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-  <h1>We turn ideas into powerful presentations.</h1>
+  <!-- HERO -->
+
+  <h1>
+    We design presentations<br>
+    that actually win.
+  </h1>
+
   <p>
-    High-impact PowerPoint design and storytelling for modern companies.
-    Helping startups, SaaS teams and global brands communicate clearly.
+    High-impact PowerPoint design and storytelling for startups, SaaS and global teams.
   </p>
 
-<a href="#contact" class="btn">Get in touch</a>
+<a href="#contact" class="btn">Start a project</a>
+
+  <!-- ABOUT -->
 
   <section>
     <h2>About</h2>
     <p>
-      I help companies simplify complex ideas and turn them into clear,
-      persuasive presentations that drive results.
+      I help companies turn complex ideas into clear, persuasive presentations.
+      From investor decks to enterprise storytelling — everything is built to drive results.
     </p>
   </section>
+
+  <!-- SERVICES -->
 
   <section>
     <h2>Services</h2>
+    <div class="grid">
+      <div>
+        <h3>Presentation Design</h3>
+        <p>PowerPoint, Google Slides, pitch decks, sales decks.</p>
+      </div>
+      <div>
+        <h3>Storytelling</h3>
+        <p>Message structure, narrative, simplifying complexity.</p>
+      </div>
+      <div>
+        <h3>Consulting</h3>
+        <p>Deck audits, strategy sessions, content clarity.</p>
+      </div>
+      <div>
+        <h3>Corporate</h3>
+        <p>Enterprise presentations for global teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+
+  <section>
+    <h2>Selected Work</h2>
+
+```
+<div class="case">
+  <strong>SaaS Pitch Deck</strong>
+  <p>Helped a startup simplify product story and secure funding.</p>
+</div>
+
+<div class="case">
+  <strong>Corporate Presentation</strong>
+  <p>Redesigned internal deck for clarity and executive communication.</p>
+</div>
+
+<div class="case">
+  <strong>Investor Deck</strong>
+  <p>Structured narrative and visuals for high-stakes presentations.</p>
+</div>
+```
+
+  </section>
+
+  <!-- PROCESS -->
+
+  <section>
+    <h2>Process</h2>
     <p>
-      Presentation design, storytelling, pitch decks and consulting.
+      Understand → Structure → Design → Refine → Deliver
     </p>
   </section>
 
-  <section>
-    <h2>Portfolio</h2>
-    <p>
-      Selected work for startups and international clients.
-    </p>
-  </section>
+  <!-- CONTACT -->
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>
-      Email: your@email.com
-    </p>
+    <p>Email: your@email.com</p>
   </section>
+
+  <div class="footer">
+    © Geometrik
+  </div>
 
 </div>
 
