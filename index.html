@@ -230,15 +230,17 @@ p {
 .card {
   padding: 34px;
   border-radius: 26px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
 
   background: linear-gradient(
-    145deg,
-    #0f1a3a,
-    #1c2a55
+    135deg,
+    #f6f8fb 0%,
+    #e9f5f1 35%,
+    #e8efff 70%,
+    #f6f8fb 100%
   );
 
-  color: white;
+  color: var(--ink);
 
   position: relative;
   overflow: hidden;
@@ -264,11 +266,11 @@ p {
 
 /* teksty */
 .card h3 {
-  color: white;
+  color: var(--ink);
 }
 
 .card p {
-  color: rgba(255,255,255,0.75);
+  color: var(--muted);
 }
 
 /* numerki */
