@@ -708,38 +708,43 @@ footer a {
     <h2>Start a project</h2>
     <p>If your presentation matters, the way it’s communicated matters too.</p>
 
-    <form action="mailto:cimerjoanna@gmail.com" method="post" enctype="text/plain">
-      <div class="form-grid">
-        <input type="text" name="Name" placeholder="Name" required>
-        <input type="email" name="Email" placeholder="Email" required>
-      </div>
+    <form action="https://api.web3forms.com/submit" method="POST">
 
-      <input type="text" name="Company" placeholder="Company">
+  <input type="hidden" name="access_key" value="10a671f7-d398-488c-9d36-a53f0283fd04">
 
-      <div class="form-grid">
-        <select name="Type of project">
-          <option>Type of project</option>
-          <option>Executive Presentation</option>
-          <option>Pitch / Investor Deck</option>
-          <option>Presentation System / Template</option>
-          <option>Report / Strategic Document</option>
-          <option>Other</option>
-        </select>
+  <div class="form-grid">
+    <input type="text" name="Name" placeholder="Name" required>
+    <input type="email" name="Email" placeholder="Email" required>
+  </div>
 
-        <select name="Budget range">
-          <option>Budget range</option>
-          <option>£1,500 – £3,000</option>
-          <option>£3,000 – £6,000</option>
-          <option>£6,000+</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
+  <input type="text" name="Company" placeholder="Company">
 
-      <input type="text" name="Timeline" placeholder="Timeline">
-      <textarea name="Message" placeholder="Message"></textarea>
+  <div class="form-grid">
+    <select name="Type of project">
+      <option>Type of project</option>
+      <option>Executive Presentation</option>
+      <option>Pitch / Investor Deck</option>
+      <option>Presentation System / Template</option>
+      <option>Report / Strategic Document</option>
+      <option>Other</option>
+    </select>
 
-      <button type="submit">Send project request →</button>
-    </form>
+    <select name="Budget range">
+      <option>Budget range</option>
+      <option>£1,500 – £3,000</option>
+      <option>£3,000 – £6,000</option>
+      <option>£6,000+</option>
+      <option>Not sure yet</option>
+    </select>
+  </div>
+
+  <input type="text" name="Timeline" placeholder="Timeline">
+  <textarea name="Message" placeholder="Message"></textarea>
+
+  <input type="checkbox" name="botcheck" style="display:none;">
+
+  <button type="submit">Send project request →</button>
+</form>
   </div>
 </section>
 
