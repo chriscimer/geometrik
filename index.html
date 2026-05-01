@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,6 +20,8 @@
 
 * { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -37,6 +38,7 @@ nav {
   padding: 28px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -71,70 +73,328 @@ nav a {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 70px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
 h1 {
   font-size: clamp(48px, 7vw, 92px);
   line-height: .96;
   letter-spacing: -0.06em;
+  margin: 0 0 30px;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 23px;
+  line-height: 1.45;
   color: #30333a;
+  max-width: 780px;
+}
+
+.hero-small {
+  font-size: 17px !important;
+  color: var(--muted) !important;
+  line-height: 1.65 !important;
+}
+
+.hero-img {
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 520px;
+  background: linear-gradient(135deg, var(--green), var(--sky), var(--blue));
+  position: relative;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-placeholder {
+  display: none;
+  height: 520px;
+  padding: 40px;
+  align-items: flex-end;
+  color: #fff;
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+.buttons {
+  margin-top: 36px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  margin-top: 20px;
   display: inline-block;
-  padding: 14px 22px;
-  border-radius: 999px;
-  border: 1px solid #111;
+  padding: 15px 24px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
   text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
 }
 
 .btn.dark {
-  background: #232c55;
-  color: #fff;
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
 }
 
 section {
-  padding: 80px 0;
-  border-top: 1px solid #eee;
+  padding: 95px 0;
+  border-top: 1px solid var(--line);
+}
+
+.intro {
+  max-width: 1000px;
+  font-size: clamp(34px, 5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+
+.section-label {
+  color: var(--blue);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: .14em;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: .8fr 1.4fr;
+  gap: 80px;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: clamp(36px, 5vw, 66px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 26px;
+  letter-spacing: -0.035em;
+  margin: 0 0 14px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.about-list {
+  margin-top: 32px;
+  display: grid;
+  gap: 12px;
+}
+
+.about-list div {
+  padding: 18px 22px;
+  background: var(--soft);
+  border-left: 5px solid var(--green);
+  font-weight: 700;
+}
+
+.services,
+.pricing,
+.why {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .card {
-  background: #f6f8fb;
+  padding: 34px;
+  background: var(--soft);
+  border-radius: 26px;
+  border: 1px solid var(--line);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--navy);
+  color: white;
+  display: grid;
+  place-items: center;
+  margin-bottom: 26px;
+  font-weight: 800;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 18px;
+  margin-top: 44px;
+}
+
+.step {
   padding: 24px;
-  border-radius: 20px;
-  margin-top: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+
+.num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--navy);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.pricing .card strong {
+  display: block;
+  font-size: 26px;
+  letter-spacing: -0.035em;
+  margin-bottom: 12px;
+}
+
+.price {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.contact-box {
+  background: var(--navy);
+  color: white;
+  border-radius: 34px;
+  padding: 56px;
+}
+
+.contact-box h2,
+.contact-box p {
+  color: white;
+}
+
+form {
+  margin-top: 34px;
+  display: grid;
+  gap: 16px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #dcdcdc;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+button {
+  padding: 16px 24px;
+  border-radius: 999px;
+  border: none;
+  background: var(--green);
+  color: var(--navy);
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.business {
+  background: var(--soft);
+  padding: 34px;
+  border-radius: 24px;
+  margin-top: 40px;
+}
+
+details {
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.legal p, .legal li {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 footer {
-  padding: 40px 0;
-  border-top: 1px solid #eee;
+  padding: 36px 0;
+  border-top: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: var(--muted);
   font-size: 14px;
 }
 
 footer a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #666;
+  color: var(--muted);
+  margin-left: 18px;
 }
 
 @media (max-width: 900px) {
-  .hero {
+  .hero,
+  .two-col,
+  .services,
+  .pricing,
+  .why,
+  .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav .links {
+    display: none;
+  }
+
+  .hero-img,
+  .hero-img img,
+  .photo-placeholder {
+    min-height: 360px;
+    height: 360px;
   }
 }
 </style>
-
 </head>
 
 <body>
@@ -146,50 +406,392 @@ footer a {
     <div class="mark"></div>
     Geometrik Studio
   </div>
-  <div>
+  <div class="links">
     <a href="#about">About</a>
-    <a href="#services">Services</a>
+    <a href="#services">What we do</a>
+    <a href="#process">Process</a>
+    <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header class="hero">
   <div>
+    <div class="eyebrow">Presentation Design · Storytelling · Visual Communication</div>
     <h1>Complex ideas, made clear.</h1>
-    <p>We design presentations and visual stories that make complex ideas clear, compelling, and impossible to ignore.</p>
-    <a href="#contact" class="btn dark">Start a Project</a>
+
+    <p>
+      We design presentations and visual stories that make complex ideas clear,
+      compelling, and impossible to ignore.
+    </p>
+
+    <p class="hero-small">
+      Most presentations fail—not because the ideas are weak, but because the message gets lost.
+      We bring structure to complexity, clarity to content, and design that helps people truly understand.
+    </p>
+
+    <p class="hero-small">
+      Geometrik Studio is a London-based design studio specialising in executive presentations,
+      strategic storytelling and visual communication.
+    </p>
+
+    <div class="buttons">
+      <a href="#contact" class="btn dark">Start a Project</a>
+      <a href="#process" class="btn">View Approach</a>
+    </div>
   </div>
-  <div>
-    <!-- możesz tu dodać zdjęcie -->
+
+  <div class="hero-img">
+    <img src="images/hero.jpg" alt="Geometrik Studio presentation design work"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="photo-placeholder">
+      Add your hero photo or slide preview here.
+    </div>
   </div>
 </header>
 
+<section>
+  <div class="intro">
+    We bring structure to complexity, clarity to content, and design that helps people truly understand.
+  </div>
+</section>
+
 <section id="about">
-  <h2>About</h2>
-  <p>Geometrik Studio is led by Joanna Cimer — a presentation designer and visual storyteller with over a decade of experience.</p>
+  <div class="two-col">
+    <div>
+      <div class="section-label">About</div>
+      <h2>Led by strategy, shaped by design.</h2>
+    </div>
+
+    <div>
+      <p>
+        Geometrik Studio is led by Joanna Cimer — a presentation designer and visual storyteller
+        with over a decade of experience working at the intersection of design, strategy and communication.
+      </p>
+
+      <p>
+        What started as freelance work evolved into a boutique studio trusted by global brands,
+        consultancies and agencies to deliver high-stakes presentations and communication assets.
+      </p>
+
+      <p>
+        I’ve worked across industries including technology, healthcare, finance and consulting—helping
+        teams turn dense, complex material into clear narratives that support decisions, influence
+        stakeholders and move projects forward.
+      </p>
+
+      <div class="about-list">
+        <div>Story first — what are you really trying to say?</div>
+        <div>Structure second — how should it flow?</div>
+        <div>Design last — how do we make it land?</div>
+      </div>
+
+      <p>
+        Not decoration. Not templates. But communication that works.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section id="services">
-  <h2>Services</h2>
+  <div class="section-label">What we do</div>
+  <h2>Presentation work built around outcomes.</h2>
 
-  <div class="card">Executive Presentations</div>
-  <div class="card">Pitch & Investor Decks</div>
-  <div class="card">Presentation Systems</div>
-  <div class="card">Data Visualisation</div>
+  <div class="services">
+    <div class="card">
+      <div class="icon">01</div>
+      <h3>Executive Presentations</h3>
+      <p>Board-level, leadership and stakeholder presentations designed for clarity, confidence and impact.</p>
+    </div>
 
+    <div class="card">
+      <div class="icon">02</div>
+      <h3>Pitch & Investor Decks</h3>
+      <p>Narratives that persuade, simplify complexity and support high-stakes conversations.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">03</div>
+      <h3>Presentation Systems & Templates</h3>
+      <p>Scalable slide systems that help teams create consistent, high-quality content internally.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">04</div>
+      <h3>Data Visualisation & Infographics</h3>
+      <p>Turning numbers, research and frameworks into visuals people actually understand.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">05</div>
+      <h3>Reports & Strategic Documents</h3>
+      <p>Thought leadership, research and internal communication designed to be read—not ignored.</p>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="section-label">How we work together</div>
+  <h2>A clear process, built for complex work.</h2>
+
+  <div class="process-grid">
+    <div class="step">
+      <div class="num">01</div>
+      <h3>Start a Project</h3>
+      <p>Submit a request with your project details, timeline and goals.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">02</div>
+      <h3>Review & Proposal</h3>
+      <p>We review your content and send a clear proposal outlining scope, timeline and pricing.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">03</div>
+      <h3>Project Kick-off</h3>
+      <p>Once confirmed, we begin work and move into the design process.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">04</div>
+      <h3>Understand</h3>
+      <p>We dive into your content, goals and audience.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">05</div>
+      <h3>Structure</h3>
+      <p>We shape the narrative into a logical, compelling flow.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">06</div>
+      <h3>Design</h3>
+      <p>We create visuals that support—not distract from the message.</p>
+    </div>
+
+    <div class="step">
+      <div class="num">07</div>
+      <h3>Refine</h3>
+      <p>We iterate quickly to get it exactly right.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2>Clear starting points.</h2>
+
+  <div class="pricing">
+    <div class="card">
+      <strong>Presentation Design</strong>
+      <p class="price">From £1,500 – £6,000</p>
+      <p>Depending on scope, content complexity and timeline.</p>
+    </div>
+
+    <div class="card">
+      <strong>Pitch / Investor Decks</strong>
+      <p class="price">From £2,000</p>
+      <p>Strategic storytelling and design for high-stakes conversations.</p>
+    </div>
+
+    <div class="card">
+      <strong>Templates & Systems</strong>
+      <p class="price">From £2,500</p>
+      <p>Reusable systems for teams who need consistency at scale.</p>
+    </div>
+
+    <div class="card">
+      <strong>Reports & Documents</strong>
+      <p class="price">From £2,000</p>
+      <p>Designed documents, reports and thought leadership assets.</p>
+    </div>
+  </div>
+
+  <p>Each project is scoped individually based on complexity, timeline and content.</p>
+</section>
+
+<section>
+  <div class="section-label">Why work with us</div>
+  <h2>Not just design. Clarity.</h2>
+
+  <div class="why">
+    <div class="card">
+      <div class="icon">✦</div>
+      <h3>You’re not hiring a production designer.</h3>
+      <p>You’re working with someone who understands how information works.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">◆</div>
+      <h3>We’re used to complexity.</h3>
+      <p>Technical, strategic, research-heavy content is where we do our best work.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">●</div>
+      <h3>Senior-level, hands-on.</h3>
+      <p>No layers. No handovers. No dilution.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">■</div>
+      <h3>Built for real business use.</h3>
+      <p>Presentations that are actually used—in meetings, pitches and decisions.</p>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: cimerjoanna@gmail.com</p>
+  <div class="contact-box">
+    <h2>Start a project</h2>
+    <p>If your presentation matters, the way it’s communicated matters too.</p>
+
+    <form action="mailto:cimerjoanna@gmail.com" method="post" enctype="text/plain">
+      <div class="form-grid">
+        <input type="text" name="Name" placeholder="Name" required>
+        <input type="email" name="Email" placeholder="Email" required>
+      </div>
+
+      <input type="text" name="Company" placeholder="Company">
+
+      <div class="form-grid">
+        <select name="Type of project">
+          <option>Type of project</option>
+          <option>Executive Presentation</option>
+          <option>Pitch / Investor Deck</option>
+          <option>Presentation System / Template</option>
+          <option>Report / Strategic Document</option>
+          <option>Other</option>
+        </select>
+
+        <select name="Budget range">
+          <option>Budget range</option>
+          <option>£1,500 – £3,000</option>
+          <option>£3,000 – £6,000</option>
+          <option>£6,000+</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+
+      <input type="text" name="Timeline" placeholder="Timeline">
+      <textarea name="Message" placeholder="Message"></textarea>
+
+      <button type="submit">Send project request →</button>
+    </form>
+
+    <div class="business">
+      <p>
+        <strong>Geometrik Limited</strong><br>
+        Trading as Geometrik Studio<br>
+        London, United Kingdom<br>
+        Email: cimerjoanna@gmail.com<br>
+        Full registered address
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="legal" id="legal">
+  <details id="terms">
+    <summary>Terms & Conditions</summary>
+    <p><strong>1. Overview</strong><br>
+    These Terms & Conditions apply to all services provided by Geometrik Limited
+    (trading as Geometrik Studio), a London-based design studio specialising in
+    presentation design and visual communication. By engaging our services, you agree
+    to the terms outlined below.</p>
+
+    <p><strong>2. Scope of Work</strong><br>
+    Each project is defined by a written agreement, proposal, or email confirmation
+    outlining scope of work, deliverables, timeline and pricing. Any work requested
+    outside the agreed scope may be subject to additional fees.</p>
+
+    <p><strong>3. Pricing & Payment</strong><br>
+    All fees are agreed in advance. Projects may require an upfront deposit, typically
+    30–50%. Final files are delivered upon full payment unless otherwise agreed.
+    Payments are due within the timeframe specified on the invoice.</p>
+
+    <p><strong>4. Revisions</strong><br>
+    A reasonable number of revisions is included within the agreed scope. Additional
+    revisions or changes outside scope will be billed separately.</p>
+
+    <p><strong>5. Timelines & Delivery</strong><br>
+    Project timelines are agreed at the start. Delays in client feedback or content
+    delivery may impact timelines. Urgent work may incur additional fees.</p>
+
+    <p><strong>6. Client Responsibilities</strong><br>
+    The client agrees to provide necessary content, materials and feedback in a timely
+    manner, ensure accuracy of provided information, and secure required rights for
+    content.</p>
+
+    <p><strong>7. Intellectual Property</strong><br>
+    Final deliverables become the client’s property upon full payment. Geometrik Studio
+    retains the right to showcase work in its portfolio unless otherwise agreed.</p>
+
+    <p><strong>8. Confidentiality</strong><br>
+    All client materials and information are treated as confidential.</p>
+
+    <p><strong>9. Limitation of Liability</strong><br>
+    Geometrik Studio is not liable for business outcomes resulting from use of deliverables
+    or errors in content provided by the client.</p>
+
+    <p><strong>10. Governing Law</strong><br>
+    These terms are governed by the laws of the United Kingdom.</p>
+  </details>
+
+  <details id="refund">
+    <summary>Refund & Cancellation Policy</summary>
+    <p><strong>1. Nature of Services</strong><br>
+    All services provided are custom, project-based design services tailored specifically
+    to each client.</p>
+
+    <p><strong>2. Refund Policy</strong><br>
+    Due to the nature of the work, refunds are not provided once work has commenced.
+    If a project is cancelled before work begins, any deposit may be refundable at our
+    discretion.</p>
+
+    <p><strong>3. Cancellation</strong><br>
+    If a client cancels a project, they will be invoiced for all work completed up to
+    the cancellation date.</p>
+
+    <p><strong>4. Project Pauses</strong><br>
+    If a project is paused or inactive for more than 14 days due to client delay, it may
+    be rescheduled based on availability and additional fees may apply.</p>
+
+    <p><strong>5. Revisions & Changes</strong><br>
+    Revisions are included only within the agreed scope. Significant changes in direction
+    may be treated as a new phase or project.</p>
+
+    <p><strong>6. Delivery of Work</strong><br>
+    Final deliverables are released after full payment is received.</p>
+  </details>
+
+  <details id="privacy">
+    <summary>Privacy Policy</summary>
+    <p><strong>1. Information Collected</strong><br>
+    We may collect name, email address, company details and project information submitted
+    via contact forms.</p>
+
+    <p><strong>2. How Information Is Used</strong><br>
+    Your information is used to respond to enquiries, deliver services and communicate
+    about projects.</p>
+
+    <p><strong>3. Data Protection</strong><br>
+    Your information is not sold or shared with third parties, except where necessary
+    to deliver services.</p>
+
+    <p><strong>4. Contact</strong><br>
+    For privacy-related questions, contact cimerjoanna@gmail.com.</p>
+  </details>
 </section>
 
 <footer>
-  <div>© Geometrik Studio · London</div>
+  <div>© Geometrik Studio · Geometrik Limited · London, United Kingdom</div>
   <div>
-    <a href="terms.html" target="_blank">Terms & Conditions</a>
-    <a href="refund.html" target="_blank">Refund Policy</a>
-    <a href="privacy.html" target="_blank">Privacy Policy</a>
+    <a href="#terms">Terms & Conditions</a>
+    <a href="#refund">Refund Policy</a>
+    <a href="#privacy">Privacy Policy</a>
   </div>
 </footer>
 
