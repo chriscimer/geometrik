@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You — Geometrik Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+:root {
+  --ink: #151515;
+  --muted: #5f6470;
+  --navy: #232c55;
+  --blue: #3769e8;
+  --green: #55d3ad;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  width: min(820px, 90%);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.logo {
+  width: 88px;
+  margin-bottom: 40px;
+}
+
+.kicker {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: clamp(48px, 8vw, 92px);
+  line-height: .95;
+  letter-spacing: -0.06em;
+  margin: 0 0 28px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 auto 36px;
+  max-width: 620px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 26px;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+  <img src="images/Geometrik logo.png" alt="Geometrik Studio" class="logo">
+
+  <div class="kicker">Message sent</div>
+
+  <h1>Thank you.</h1>
+
+  <p>
+    Your project request has been received.  
+    We’ll review the details and get back to you shortly.
+  </p>
+
+  <a href="https://geometrik.co.uk" class="btn">Back to homepage</a>
+</div>
+
+</body>
+</html>
