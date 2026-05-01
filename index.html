@@ -192,15 +192,11 @@ h2 {
   margin: 0;
 }
 
-h3 {
-  font-size: 26px;
-  letter-spacing: -0.035em;
-  margin: 0 0 14px;
+.card h3 {
+  color: var(--ink);
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.7;
+.card p {
   color: var(--muted);
 }
 
@@ -227,20 +223,40 @@ p {
 
 .card {
   padding: 34px;
-  background: var(--soft);
   border-radius: 26px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(0,0,0,0.04);
+
+  background: linear-gradient(
+    135deg,
+    #f6f8fb 0%,
+    #e9f5f1 35%,
+    #e8efff 70%,
+    #f6f8fb 100%
+  );
+
+  color: var(--ink);
+
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .icon {
   width: 48px;
   height: 48px;
-  border-radius: 14px;
-  background: var(--navy);
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #55d3ad,
+    #3769e8
+  );
+
   color: white;
+
   display: grid;
   place-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   font-weight: 800;
 }
 
