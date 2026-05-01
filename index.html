@@ -35,43 +35,41 @@ body {
 }
 
 nav {
-  padding: 28px 0;
+  padding: 24px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 28px;
 }
 
-.logo {
+.logo img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+.links {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-weight: 700;
-  font-size: 22px;
+  gap: 26px;
 }
 
-.mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: conic-gradient(
-    var(--green) 0 25%,
-    var(--navy) 25% 50%,
-    var(--blue) 50% 75%,
-    var(--sky) 75% 100%
-  );
-}
-
-nav a {
-  margin-left: 28px;
+.links a {
   color: var(--ink);
   text-decoration: none;
   font-size: 14px;
 }
 
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .hero {
   padding: 70px 0 90px;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 70px;
   align-items: center;
 }
@@ -86,10 +84,11 @@ nav a {
 }
 
 h1 {
-  font-size: clamp(48px, 7vw, 92px);
-  line-height: .96;
-  letter-spacing: -0.06em;
+  font-size: clamp(42px, 5.8vw, 76px);
+  line-height: 1;
+  letter-spacing: -0.055em;
   margin: 0 0 30px;
+  max-width: 860px;
 }
 
 .hero p {
@@ -109,7 +108,7 @@ h1 {
   border-radius: 28px;
   overflow: hidden;
   min-height: 520px;
-  background: linear-gradient(135deg, var(--green), var(--sky), var(--blue));
+  background: var(--soft);
   position: relative;
 }
 
@@ -126,7 +125,8 @@ h1 {
   height: 520px;
   padding: 40px;
   align-items: flex-end;
-  color: #fff;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--green), var(--sky), var(--blue));
   font-size: 34px;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -148,6 +148,8 @@ h1 {
   text-decoration: none;
   font-weight: 700;
   border-radius: 999px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .btn.dark {
@@ -336,23 +338,6 @@ button {
   margin-top: 40px;
 }
 
-details {
-  border-top: 1px solid var(--line);
-  padding: 24px 0;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: 800;
-  font-size: 18px;
-}
-
-.legal p, .legal li {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
 footer {
   padding: 36px 0;
   border-top: 1px solid var(--line);
@@ -367,6 +352,12 @@ footer {
 footer a {
   color: var(--muted);
   margin-left: 18px;
+}
+
+@media (max-width: 1000px) {
+  .nav-buttons {
+    display: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -393,10 +384,13 @@ footer a {
     min-height: 360px;
     height: 360px;
   }
+
+  .logo img {
+    height: 46px;
+  }
 }
 </style>
 </head>
-
 <body>
 
 <div class="container">
