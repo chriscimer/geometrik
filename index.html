@@ -225,22 +225,70 @@ p {
   gap: 24px;
 }
 
+/* NOWE PREMIUM BOXY */
+
 .card {
   padding: 34px;
-  background: var(--soft);
   border-radius: 26px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255,255,255,0.06);
+
+  background: linear-gradient(
+    145deg,
+    #0f1a3a,
+    #1c2a55
+  );
+
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
+
+/* subtelny glow */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  background: linear-gradient(135deg,#55d3ad,#3769e8);
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* hover efekt */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* teksty */
+.card h3 {
+  color: white;
+}
+
+.card p {
+  color: rgba(255,255,255,0.75);
+}
+
+/* numerki */
 
 .icon {
   width: 48px;
   height: 48px;
-  border-radius: 14px;
-  background: var(--navy);
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #55d3ad,
+    #3769e8
+  );
+
   color: white;
+
   display: grid;
   place-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   font-weight: 800;
 }
 
