@@ -151,7 +151,16 @@ h1 {
   font-size: 14px;
   white-space: nowrap;
 }
+.btn {
+  transition: all 0.25s ease;
+}
 
+/* View Approach (outline button) */
+.btn:not(.dark):hover {
+  background: var(--green);   /* Twój jasnozielony z logo */
+  border-color: var(--green);
+  color: var(--navy);         /* tekst ciemny żeby był czytelny */
+}
 .btn.dark:hover {
   background: #2f5bd4; /* trochę ciemniejszy blue */
   border-color: #2f5bd4;
